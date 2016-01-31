@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'home_help_about/home'
+  root 'home_help_about#home'
 
   get 'home_help_about/help'
 
