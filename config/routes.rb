@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'home_help_about/home'
+
+  get 'home_help_about/help'
+
+  get 'home_help_about/about'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
