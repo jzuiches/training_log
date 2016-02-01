@@ -2,13 +2,44 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %> </title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  </script>
+<![endif]-->
 </head>
 <body>
-
+  <div data-role="page">
+    <div data-role="panel" data-display="overlay" data-position="right" id="mypanel">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="#">Home</a></li>
+        <li data-icon="info"><a href="#">Help</a></li>
+        <li><a href="#">Log in</a></li>
+        <li><a href="#my-header" data-rel="close">Close</a></li>
+      </ul>
+    </div>
+      <div data-role="header" id="header_bar">
+         <h1>SVSP</h1>
+        <a href="#mypanel" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-right">Menu</a>
+      </div>
+        <div data-role="content">
 <%= yield %>
+        </div>
+        <div data-role="footer" id="footer_bar">
+           <small>
+    SVSP Training Log
+  </small>
+
+    <ul>
+      <li><%= link_to "About", "#" %></li>
+      <li><%= link_to "Contact", "#" %></li>
+    </ul>
+  </div>
+
+  </div>
 
 </body>
 </html>

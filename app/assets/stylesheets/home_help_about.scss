@@ -1,3 +1,28 @@
 // Place all the styles related to the HomeHelpAbout controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100);
+
+*{
+  font-family:"Lato", sans-serif !important;
+}
+#header_bar{
+  background-color: white;
+}
+h1{
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: none;
+}
+
+.homepage {
+  text-align: center;
+  background-color: red;
+}
+
+img {
+  height: 20em;
+  width: 20em;
+}
